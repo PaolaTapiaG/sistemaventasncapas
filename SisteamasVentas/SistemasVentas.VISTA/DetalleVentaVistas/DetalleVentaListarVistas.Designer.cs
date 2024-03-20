@@ -1,6 +1,6 @@
-﻿namespace SistemasVentas.VISTA.PersonaVistas
+﻿namespace SistemasVentas.VISTA.DetalleVentaVistas
 {
-    partial class PersonaListarVista
+    partial class DetalleVentaListarVistas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -38,37 +37,21 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(14, 16);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(12, 21);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(530, 437);
+            dataGridView1.Size = new Size(486, 370);
             dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // DetalleVentaListarVistas
             // 
-            button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(450, 479);
-            button1.Name = "button1";
-            button1.Size = new Size(196, 29);
-            button1.TabIndex = 1;
-            button1.Text = "SELECCIONAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // PersonaListarVista
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(658, 520);
-            Controls.Add(button1);
+            ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "PersonaListarVista";
-            Text = "PersonaListarVista";
-            Load += PersonaListarVista_Load;
+            Name = "DetalleVentaListarVistas";
+            Text = "DetalleVentaListarVistas";
+            Load += DetalleVentaListarVistas_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -76,6 +59,5 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button button1;
     }
 }
