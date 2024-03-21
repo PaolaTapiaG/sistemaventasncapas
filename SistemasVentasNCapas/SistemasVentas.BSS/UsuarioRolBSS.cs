@@ -9,16 +9,28 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.BSS
 {
-     public class UsuarioRolBSS
+    public class UsuarioRolBss
     {
-        UsuarioRolDAL dal = new UsuarioRolDAL();
+        UsuarioRolDal dal = new UsuarioRolDal();
         public DataTable ListarUsuarioRolBss()
         {
             return dal.ListarUsuarioRolDal();
         }
-        public void InsertarUsuarioRolBss(UsuarioRol usuarioRol)
+        public void InsertarUsuarioRolBss(UsuarioRol usuariorol)
         {
-            dal.InsertarUsuarioRolDAL(usuarioRol);
+           dal.InsertarUsuarioRolDal(usuariorol);
+        }
+        public UsuarioRol ObtenerUsuarioRolIdBss(int id)
+        {
+            return dal.ObtenerUsuarioRolIdDal(id);
+        }
+        public void EditarUsuarioRolBss(UsuarioRol p)
+        {
+            dal.EditarUsuarioRolDal(p);
+        }
+        public void EliminarUsuarioRolBss(int id)
+        {
+            dal.EliminarUsuarioRolDal(id);
         }
     }
 }

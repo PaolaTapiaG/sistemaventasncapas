@@ -28,105 +28,162 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             dateTimePicker1 = new DateTimePicker();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             textBox3 = new TextBox();
-            button1 = new Button();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             button2 = new Button();
+            button1 = new Button();
+            label5 = new Label();
+            textBox4 = new TextBox();
+            button4 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
-            // label1
+            // dateTimePicker1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(31, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(62, 15);
-            label1.TabIndex = 0;
-            label1.Text = "IDCLIENTE";
+            dateTimePicker1.Location = new Point(160, 140);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(335, 27);
+            dateTimePicker1.TabIndex = 52;
             // 
-            // label2
+            // textBox3
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(31, 55);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 15);
-            label2.TabIndex = 1;
-            label2.Text = "IDVENDEDOR";
+            textBox3.Location = new Point(160, 188);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(313, 27);
+            textBox3.TabIndex = 51;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(160, 92);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(313, 27);
+            textBox2.TabIndex = 50;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(160, 39);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(313, 27);
+            textBox1.TabIndex = 49;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(61, 145);
+            label4.Name = "label4";
+            label4.Size = new Size(54, 20);
+            label4.TabIndex = 48;
+            label4.Text = "FECHA";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(31, 90);
+            label3.Location = new Point(65, 188);
             label3.Name = "label3";
-            label3.Size = new Size(39, 15);
-            label3.TabIndex = 2;
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 47;
             label3.Text = "TOTAL";
             // 
-            // dateTimePicker1
+            // label2
             // 
-            dateTimePicker1.Location = new Point(31, 125);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(314, 23);
-            dateTimePicker1.TabIndex = 3;
+            label2.AutoSize = true;
+            label2.Location = new Point(9, 95);
+            label2.Name = "label2";
+            label2.Size = new Size(106, 20);
+            label2.TabIndex = 46;
+            label2.Text = "ID VENDEDOR";
             // 
-            // textBox1
+            // label1
             // 
-            textBox1.Location = new Point(141, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(210, 23);
-            textBox1.TabIndex = 4;
+            label1.AutoSize = true;
+            label1.Location = new Point(32, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(83, 20);
+            label1.TabIndex = 45;
+            label1.Text = "ID CLIENTE";
             // 
-            // textBox2
+            // button2
             // 
-            textBox2.Location = new Point(141, 47);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(210, 23);
-            textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(141, 82);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(210, 23);
-            textBox3.TabIndex = 6;
+            button2.DialogResult = DialogResult.Cancel;
+            button2.Location = new Point(379, 339);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 44;
+            button2.Text = "CANCELAR";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            button1.Location = new Point(31, 179);
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(139, 339);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 7;
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 43;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // button2
+            // label5
             // 
-            button2.Location = new Point(276, 179);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 8;
-            button2.Text = "CANCELAR";
-            button2.UseVisualStyleBackColor = true;
+            label5.AutoSize = true;
+            label5.Location = new Point(51, 236);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 20);
+            label5.TabIndex = 53;
+            label5.Text = "ESTADO";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(160, 236);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(313, 27);
+            textBox4.TabIndex = 54;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(550, 86);
+            button4.Name = "button4";
+            button4.Size = new Size(117, 29);
+            button4.TabIndex = 70;
+            button4.Text = "SELECCIONAR";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(550, 37);
+            button3.Name = "button3";
+            button3.Size = new Size(117, 29);
+            button3.TabIndex = 69;
+            button3.Text = "SELECCIONAR";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // VentaInsertarVista
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(385, 238);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(759, 450);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(textBox4);
+            Controls.Add(label5);
+            Controls.Add(dateTimePicker1);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Name = "VentaInsertarVista";
             Text = "VentaInsertarVista";
             ResumeLayout(false);
@@ -135,14 +192,19 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
         private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
-        private TextBox textBox2;
         private TextBox textBox3;
-        private Button button1;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
         private Button button2;
+        private Button button1;
+        private Label label5;
+        private TextBox textBox4;
+        private Button button4;
+        private Button button3;
     }
 }

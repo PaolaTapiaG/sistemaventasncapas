@@ -9,16 +9,28 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.BSS
 {
-    public class ProveeBSS
+    public class ProveeBss
     {
-        ProveeDAL dal = new ProveeDAL();
+        ProveeDal dal = new ProveeDal();
         public DataTable ListarProveeBss()
         {
             return dal.ListarProveeDal();
         }
         public void InsertarProveeBss(Provee provee)
         {
-            dal.InsertarProveeDAL(provee);
+            dal.InsertarProveeDal(provee);
+        }
+        public Provee ObtenerProveeIdBss(int id)
+        {
+            return dal.ObtenerProveeIdDal(id);
+        }
+        public void EditarProveeBss(Provee p)
+        {
+            dal.EditarProveeDal(p);
+        }
+        public void EliminarProveeBss(int id)
+        {
+            dal.EliminarProveeDal(id);
         }
     }
 }

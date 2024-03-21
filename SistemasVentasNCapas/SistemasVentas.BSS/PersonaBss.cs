@@ -1,6 +1,5 @@
-﻿
+﻿using SistemasVentas.DAL;
 using SistemasVentas.Modelos;
-using SistemasVentas.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,19 +11,26 @@ namespace SistemasVentas.BSS
 {
     public class PersonaBss
     {
-        PersonaDal dal = new PersonaDal();
+        PersonaDal dal =new PersonaDal();
         public DataTable ListarPersonaBss()
-        { 
+        {
             return dal.ListarPersonasDal();
         }
-
         public void InsertarPersonaBss(Persona persona)
         {
-            dal.InsertarPersonaDAL(persona);
+            dal.InsertarPersonaDal(persona);
         }
-        public Persona ObtenerIdBss (int id)
+        public Persona ObtenerPersonaIdBss(int id)
         {
-            return dal.ObtenerPersonaId(id);
+            return dal.ObtenerPersonaIdDal(id);
+        }
+        public void EditarPersonaBss(Persona p)
+        {
+            dal.EditarPersonaDal(p);
+        }
+        public void EliminarPersonaBss(int id)
+        {
+            dal.EliminarPersonaDal(id);
         }
     }
 }

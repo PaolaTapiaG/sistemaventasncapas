@@ -1,5 +1,7 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.ProductoVistas;
+using SistemasVentas.VISTA.IngresoVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,28 +12,65 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemasVentas.VISTA.DetalleingVistas
+namespace SistemasVentas.VISTA.DetalleIngVistas
 {
-    public partial class DetalleingInsertarVista : Form
+    public partial class DetalleIngInsertarVista : Form
     {
-        public DetalleingInsertarVista()
+        public DetalleIngInsertarVista()
         {
             InitializeComponent();
         }
-        DetalleingBSS bss = new DetalleingBSS();
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        DetalleIngBss bss = new DetalleIngBss();
         private void button1_Click(object sender, EventArgs e)
         {
-            Detalleing d = new Detalleing();
-            d.IdIngreso= Convert.ToInt32(textBox1.Text);
-            d.IdProducto = Convert.ToInt32(textBox2.Text);
-            d.FechaVenc = dateTimePicker1.Value;
-            d.Cantidad = Convert.ToInt32(textBox3.Text);
-            d.PrecioCosto = Convert.ToDecimal(textBox4.Text);
-            d.PrecioVenta = Convert.ToDecimal(textBox5.Text);
-            d.SubTotal = Convert.ToDecimal(textBox6.Text);
+            DetalleIng p = new DetalleIng();
+            p.IdIngreso = IdIngresoSeleccionada;
+            p.IdProducto = IdProductoSeleccionada;
+            p.FechaVenc = dateTimePicker1.Value;
+            p.Cantidad = Convert.ToInt32(textBox4.Text);
+            p.PrecioCosto = Convert.ToDecimal(textBox5.Text);
+            p.PrecioVenta = Convert.ToDecimal(textBox6.Text);
+            p.SubTotal = Convert.ToDecimal(textBox7.Text);
+            bss.InsertarDetalleIngBss(p);
+            MessageBox.Show("Se guardó correctamente a Detalle Ing");
 
-            bss.InsertarDetalleingBss(d);
-            MessageBox.Show("Se guardo correctamente Detalleing");
+        }
+        public static int IdProductoSeleccionada = 0;
+        ProductoBss bsspro = new ProductoBss();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ProductoListarVista fr = new ProductoListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Producto producto = bsspro.ObtenerProductoIdBss(IdProductoSeleccionada);
+                textBox1.Text = producto.Nombre;
+            }
+        }
+        public static int IdIngresoSeleccionada = 0;
+        IngresoBss bssing = new IngresoBss();
+        private void button4_Click(object sender, EventArgs e)
+        {
+            IngresoListarVista fr = new IngresoListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Ingreso ingreso = bssing.ObtenerIngresoIdBss(IdIngresoSeleccionada);
+                textBox2.Text = ingreso.IdIngreso.ToString();
+            }
+        }
+
+        private void DetalleIngInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

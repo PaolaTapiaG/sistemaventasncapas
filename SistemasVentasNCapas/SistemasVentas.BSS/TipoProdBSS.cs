@@ -9,16 +9,28 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.BSS
 {
-    public class TipoProdBSS
+    public class TipoProdBss
     {
-        TipoProdDAL dal = new TipoProdDAL();
+        TipoProdDal dal = new TipoProdDal();
         public DataTable ListarTipoProdBss()
         {
             return dal.ListarTipoProdDal();
         }
         public void InsertarTipoProdBss(TipoProd tipoprod)
         {
-            dal.InsertarTipoProdDAL(tipoprod);
+            dal.InsertarTipoProdDal(tipoprod);
+        }
+        public TipoProd ObtenerTipoProdIdBss(int id)
+        {
+            return dal.ObtenerTipoProdIdDal(id);
+        }
+        public void EditarTipoProdBss(TipoProd p)
+        {
+            dal.EditarTipoProdDal(p);
+        }
+        public void EliminarTipoProdBss(int id)
+        {
+            dal.EliminarTipoProdDal(id);
         }
     }
 }

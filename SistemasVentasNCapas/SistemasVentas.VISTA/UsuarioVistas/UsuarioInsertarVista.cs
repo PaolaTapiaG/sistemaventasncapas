@@ -19,33 +19,27 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         {
             InitializeComponent();
         }
-        public static int IdPersonaSeleccionada = 0;
-        UsuarioBSS bss = new UsuarioBSS();
-        PersonaBss Bss = new PersonaBss();
+        UsuarioBss bssuser = new UsuarioBss();
         private void button1_Click(object sender, EventArgs e)
         {
-            Usuario u = new Usuario();
-            u.IdPersona= IdPersonaSeleccionada;
-            u.NombreUser = textBox2.Text;
-            u.Contraseña = textBox3.Text;
-            u.FechaReg = dateTimePicker1.Value;
+            Usuario p = new Usuario();
+            p.IdPersona = IdPersonaSeleccionada;
+            p.NombreUser = textBox2.Text;
+            p.Contraseña = textBox3.Text;
+            p.FechaReg = dateTimePicker1.Value;
 
-            bss.InsertarUsuarioBss(u);
-            MessageBox.Show("Se guardo correctamente El Usuario");
+            bssuser.InsertarUsuarioBss(p);
+            MessageBox.Show("Se guardó correctamente a Usuario");
         }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        public static int IdPersonaSeleccionada = 0;
+        PersonaBss bss = new PersonaBss();
         private void button3_Click(object sender, EventArgs e)
         {
             PersonaListarVista fr = new PersonaListarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
-                Persona p =Bss.ObtenerIdBss(IdPersonaSeleccionada);
-                textBox1.Text = p.Nombre + " " + p.Apellido;
+                Persona persona = bss.ObtenerPersonaIdBss(IdPersonaSeleccionada);
+                textBox1.Text = persona.Nombre + " " + persona.Apellido;
             }
         }
     }

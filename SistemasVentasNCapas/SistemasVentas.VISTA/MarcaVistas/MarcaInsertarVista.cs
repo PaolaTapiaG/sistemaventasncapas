@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemasVentas.VISTA.MarcaVistas
 {
@@ -18,21 +19,14 @@ namespace SistemasVentas.VISTA.MarcaVistas
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        MarcaBss bss = new MarcaBss();
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-        MarcaBSS bss = new MarcaBSS();
-
-        
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Marca m = new Marca();
-            m.Nombre = textBox2.Text;
-            bss.InsertarMarcaBss(m);
-            MessageBox.Show("Se guardo correctamente");
+            Marca p = new Marca();
+            p.Nombre =textBox1.Text;
+            p.Estado = textBox2.Text;
+            bss.InsertarMarcaBss(p);
+            MessageBox.Show("Se guardó correctamente a Marca");
         }
     }
 }

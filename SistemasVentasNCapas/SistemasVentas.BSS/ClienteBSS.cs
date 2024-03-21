@@ -9,17 +9,28 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.BSS
 {
-    public class ClienteBSS
+    public class ClienteBss
     {
-        ClienteDAL dal = new ClienteDAL();
+        ClienteDal dal = new ClienteDal();
         public DataTable ListarClienteBss()
         {
             return dal.ListarClienteDal();
         }
-
         public void InsertarClienteBss(Cliente cliente)
         {
-            dal.InsertarClienteDAL(cliente);
+            dal.InsertarClienteDal(cliente);
+        }
+        public Cliente ObtenerClienteIdBss(int id)
+        {
+            return dal.ObtenerClienteIdDal(id);
+        }
+        public void EditarClienteBss(Cliente p)
+        {
+            dal.EditarClienteDal(p);
+        }
+        public void EliminarClienteBss(int id)
+        {
+            dal.EliminarClienteDal(id);
         }
     }
 }

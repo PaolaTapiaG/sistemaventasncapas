@@ -9,16 +9,28 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.BSS
 {
-    public class MarcaBSS
+    public class MarcaBss
     {
-        MarcaDAL dal = new MarcaDAL();
+        MarcaDal dal = new MarcaDal();
         public DataTable ListarMarcaBss()
         {
             return dal.ListarMarcaDal();
         }
         public void InsertarMarcaBss(Marca marca)
         {
-            dal.InsertarMarcaDAL(marca);
+            dal.InsertarMarcaDal(marca);
+        }
+        public Marca ObtenerMarcaIdBss(int id)
+        {
+            return dal.ObtenerMarcaIdDal(id);
+        }
+        public void EditarMarcaBss(Marca p)
+        {
+            dal.EditarMarcaDal(p);
+        }
+        public void EliminarMarcaBss(int id)
+        {
+            dal.EliminarMarcaDal(id);
         }
     }
 }
